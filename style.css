@@ -13,8 +13,31 @@
   --pastelblue2: #E4E8F4;
   --font: 'Poppins', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font);
+}
+/*Kegunaan */
+.bawah::after{
+  content: '';
+  display: block;
+  border-bottom: 3px solid var(--pastelblue);
+  width: 5%;
+  padding-bottom: 5px;
+  margin: auto;
+  margin-bottom: -8px; 
+  margin-top: 0.5rem; 
+}
+.bawah1::after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid var(--pink);
+  width: 6%;
+  padding-bottom: 5px;
+  margin-bottom: -8px; 
+  margin-top: 0.5rem; 
 }
 /* Navbar */
 .navbar-brand {
@@ -316,10 +339,12 @@ body {
   background: var(--pink); 
 }
 #portfolio .card-port {
-  margin: 15px;
+  margin: 10px;
   background:#2E45B0;
   border-radius: 20px;
   padding: 25px;
+  display: flex;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;;
 } 
 #portfolio h2 {
@@ -377,13 +402,13 @@ footer section .btn-floating:hover {
     margin-right: 30px;
   }
   .nav-link:hover::after {
-		content: '';
-		display: block;
-		border-bottom: 3px solid var(--pink);
-		width: 50%;
-		padding-bottom: 5px;
-		margin: auto;
-		margin-bottom: -8px;
+	content: '';
+	display: block;
+	border-bottom: 3px solid var(--pink);
+	width: 50%;
+	padding-bottom: 5px;
+	margin: auto;
+	margin-bottom: -8px;
 	}
   .jumbotron h1,.sosialmedia{
     position: relative;
@@ -434,23 +459,19 @@ footer section .btn-floating:hover {
     left: -5%;
   }
   #portfolio .card-text {
-    transform: translate(20%, 30%);
+    transform: translate(20%,0%);
   }
   #portfolio .card-port {
     width: 1140px;
     height: 500px;
-    margin: 0px;
+    margin:  0;
     padding: 0px;
-  }
-  .card-port img {
-    position: relative;
-    top: 4rem;
-  }
+    display: flex;
+  } 
   #portfolio .bubble {
     left: 96%;
   }
 }
-
 /* Mobile Version */ 
 @media (max-width: 600px) {
   #about .bubblepink {
