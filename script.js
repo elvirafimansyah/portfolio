@@ -22,3 +22,6 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     console.log('Success!', response)})
   .catch(error => console.error('Error!', error.message))
 })
+$('.js-scroll-trigger').click(function() {
+  $('.navbar-collapse').collapse('hide');
+});
