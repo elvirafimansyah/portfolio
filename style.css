@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +56,7 @@ body {
 }
 /* About Me */
 #about {
-  margin-bottom: -20rem;
+  margin-bottom: -42rem;
 }
 #about .bubblepink {
   position: relative;
@@ -118,20 +119,22 @@ body {
   color: var(--blue);
   font-weight: 600;
 }
+
 #projects .main-card {
-  box-shadow: #8896D7 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 20px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease-in;
+}
+#projects .main-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  cursor: pointer;
 }
 .main-card .card-image img{
   border-radius: 10px;
   margin-bottom: 1rem;
   border: 2px solid #3744AC;
   transition: 0.3s ease-in-out;
-}
-.main-card .card-image img:hover{
-  transform: scale(1.02);
-  cursor: pointer
 }
 .main-card .card-text a {
   text-decoration: none;
@@ -143,6 +146,230 @@ body {
 }
 .main-card .card-text a:hover {
   color: var(--blue);
+}
+.bubble {
+  overflow: hidden;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  background: var(--pastelpink);
+  border-radius: 50%;
+  position: relative;
+  left: -6rem;
+  top: 5rem;
+}
+.circle2 {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  left: 85%;
+  top: 10rem;
+  transform: rotate(98deg);
+}
+
+/* Skills */
+#skills {
+  margin-top: 2rem;
+}
+.bubbleend {
+  position: relative;
+  left: 60%;
+  top: 5%;
+  transform: rotate(50deg);
+}
+#skills .bubble {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: -15%;
+  border-radius: 50%;
+  background: #8896D7; 
+}
+#skills p {
+  font-size: 20px;
+  color: var(--blue);
+  font-weight: 600;
+}
+#skills h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+.main-skills {
+  width: 208px;
+  height: 197px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all .6s ease;
+  margin-top: 2rem;
+  background: #fff;
+}
+.skill1 {
+  border: 2px solid #FF3300;
+  position: relative;
+  z-index: 1;
+}
+.skill1::before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 100%;
+  left:  0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background: #ffeeea;
+  border-radius: 12px;
+}
+.skill1:hover::before {
+  opacity: 1;
+  transition: 0.5s all ease;
+  top: 0;
+  z-index: -1;
+}
+.skill2 {
+  border: 2px solid #0A85FF;
+  position: relative;
+  z-index: 1;
+}
+.skill2::before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 100%;
+  left:  0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background: #f1f8ff;
+  border-radius: 12px;
+}
+.skill2:hover::before {
+  opacity: 1;
+  transition: 0.8s all ease;
+  top: 0;
+  z-index: -1;
+}
+.skill3 {
+  border: 2px solid #983FF1;
+  position: relative;
+  z-index: 1;
+}
+.skill3::before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 100%;
+  left:  0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background: #f7f0ff;
+  border-radius: 12px;
+}
+.skill3:hover::before {
+  opacity: 1;
+  transition: 0.8s all ease;
+  top: 0;
+  z-index: -1;
+}
+.skill4 {
+  border: 2px solid #0080ff;
+  position: relative;
+  z-index: 1;
+}  
+.skill4::before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 100%;
+  left:  0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background: #f3f9ff;
+  border-radius: 12px;
+}
+.skill4:hover::before {
+  opacity: 1;
+  transition: 0.8s all ease;
+  top: 0;
+  z-index: -1;
+}
+.main-skills .card-skills h6 {
+  margin-top: 1rem;
+}
+
+/* Portfolio */ 
+#portfolio {
+  margin-bottom: 10rem;
+  margin-top: 10em;
+}
+#portfolio .bubble {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 88%;
+  border-radius: 50%;
+  background: var(--pink); 
+}
+#portfolio .card-port {
+  margin: 15px;
+  background:#2E45B0;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;;
+} 
+#portfolio h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 3rem;
+}
+#portfolio .card-text {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+}
+.card-port h1{
+  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: 600;
+}
+.card-port p {
+  font-size: 28px;
+}
+.card-port img {
+  position: none;
+  top: 0;
+}
+
+/* Contact */
+#contact {
+  margin-bottom: 7rem;
+}
+.contact img {
+  width: 700px;
+  height: 342px;
+}
+#contact {
+  margin-top: 5rem;
+}
+#contact h2 {
+  font-size: 44px;
+}
+#contact h2 span {
+  font-weight: 700;
+  color: var(--pink);
+}
+.contact .btn-kirim {
+  background: var(--pink);
+  color: white;
+}
+/* Footer */
+footer section .btn-floating:hover {
+  background: var(--blue)
 }
 /* Desktop Version */
 @media (min-width: 992px) {
@@ -158,7 +385,12 @@ body {
 		margin: auto;
 		margin-bottom: -8px;
 	}
-  .jumbotron h1,.sosialmedia ,.btn {
+  .jumbotron h1,.sosialmedia{
+    position: relative;
+    top: 30%;
+    left: 12%;
+  }
+  .jumbotron .btn {
     position: relative;
     top: 30%;
     left: 12%;
@@ -191,15 +423,56 @@ body {
   .exp {
     margin-right: 6rem;
   }
+  #projects .main-card:hover {
+    transform: scale(1.03);
+  }
+  .bubbleend {
+    left: 90%;
+    top: 10%;
+  }
+  #skills .bubble {
+    left: -5%;
+  }
+  #portfolio .card-text {
+    transform: translate(20%, 30%);
+  }
+  #portfolio .card-port {
+    width: 1140px;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .card-port img {
+    position: relative;
+    top: 4rem;
+  }
+  #portfolio .bubble {
+    left: 96%;
+  }
 }
 
 /* Mobile Version */ 
 @media (max-width: 600px) {
   #about .bubblepink {
-    left: -11%;
+    left: -5em;
     width: 200px;
   }
   #projects {
-    margin-top: 25rem;
+    margin-top: 29rem;
   }
+  .circle {
+    top: 26rem;
+    width: 150px;
+    height: 150px;
+    left: -6rem;
+  }
+  .circle2 {
+    opacity: 0;
+  }
+  #projects .main-card {
+    margin-bottom: 2rem;
+  }
+  #skills .container {
+    margin-top: 2rem;
+  } 
 }
