@@ -118,8 +118,12 @@ body {
 #about .about .keterangan {
   display: flex;
 }
+#about  .exp1 {
+  border-right: 1px solid lightgray;
+  padding-right: 1rem;
+}
 .exp {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 .book {
   color:#7D46F2;
@@ -195,6 +199,10 @@ body {
 #skills {
   margin-top: 2rem;
 }
+.createskills::after {
+  content: url(img/hiasan.png);
+  position: relative;
+}
 .bubbleend {
   position: relative;
   left: 60%;
@@ -228,6 +236,7 @@ body {
   transition: all .6s ease;
   margin-top: 2rem;
   background: #fff;
+  margin-bottom: 5rem;
 }
 .skill1 {
   border: 2px solid #FF3300;
@@ -323,11 +332,135 @@ body {
 }
 .main-skills .card-skills h6 {
   margin-top: 1rem;
+  font-weight: bold;
+}
+.main-skills .card-skills span {
+  font-weight: bold;
 }
 
+/* Client Feedback */
+#client {
+  margin-top: 10%;
+}
+#client p {
+  color: var(--blue);
+  font-weight: 700;
+  position: relative;
+  top: 10px;
+}
+#client h2 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+.card-client {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(0deg, var(--pink), var(--pastelpink));
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  color: white;
+  position: relative;
+  z-index: -1;
+  top: 2rem;
+  margin-bottom: 5rem;
+}
+.card-client::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background: var(--pastelblue);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  top: -50%;
+  left: 55%;
+  opacity: 0.5;
+}
+.card-client::after {
+  content: '';
+  width: 55px;
+  height: 55px;
+  background: var(--pastelpink);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.9;
+  top: -35%;
+  left: 30%;
+}
+.card-client .people h4,
+span {
+  position: relative;
+  top: -24%;
+}
+.card-client .quote {
+  position: relative;
+  top: -10%;
+}
+.card-client .card-text {
+  position: relative;
+  top: -6%;
+}
+.card-client .people img {
+  border-radius: 50%;
+  position: relative;
+  top: -30%;
+  z-index: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-client .people h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-client .people span {
+  font-size: 14px;
+  font-weight: 550;
+}
+#client .card-text {
+  font-family: 'Fira Sans', sans-serif;
+}
+#client .card-text::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background: var(--pastelpink);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.9;
+  top: 150%;
+  left: -30%;
+}
+#client .card-text::after {
+  content: '';
+  width: 55px;
+  height: 55px;
+  background: var(--pastelblue);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.5;
+  top: 190%;
+  left: 20%;
+}
+.brand ul {
+  display: inline;
+}
+.brand ul li {
+  list-style: none;
+  margin-right: 4rem;
+  margin-bottom: 2.5rem;
+}
 /* Portfolio */ 
 #portfolio {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   margin-top: 10em;
 }
 #portfolio .bubble {
@@ -346,7 +479,7 @@ body {
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;;
-} 
+}
 #portfolio h2 {
   font-size: 35px;
   font-weight: 600;
@@ -374,6 +507,9 @@ body {
 #contact {
   margin-bottom: 7rem;
 }
+#contact::before {
+  content: url(img/hiasan.png);
+}
 .contact img {
   width: 700px;
   height: 342px;
@@ -383,6 +519,7 @@ body {
 }
 #contact h2 {
   font-size: 44px;
+  margin-top: 1rem;
 }
 #contact h2 span {
   font-weight: 700;
@@ -448,12 +585,18 @@ footer section .btn-floating:hover {
   .exp {
     margin-right: 6rem;
   }
+  #about .exp1 {
+    padding-right: 5.5rem;
+  }
   #projects .main-card:hover {
     transform: scale(1.03);
   }
   .bubbleend {
     left: 90%;
     top: 10%;
+  }
+  .createskills::after {
+    left: 104.5%;
   }
   #skills .bubble {
     left: -5%;
@@ -471,9 +614,41 @@ footer section .btn-floating:hover {
   #portfolio .bubble {
     left: 96%;
   }
+  .card-client {
+    width: 700px;
+    height: 315px;
+    margin-left: 0.7rem;
+  }
+  .card-client::before {
+    left: 120%;
+    top: -10%;
+  }
+  .card-client::after {
+    left: 111%;
+    top: 14%;
+  }
+  #client .card-text::before {
+    left: -50%;
+  }
+  #client .card-text::after {
+    left: -40%;
+  }
+  .brand {
+    margin-left: 3rem;
+  }
+  .brand ul {
+    display: flex;
+  }
+  .brand ul li {
+    margin-bottom: 0;
+    transition: 0.3s ease-in;
+  }
+  .brand ul li:hover {
+    transform: rotate(2deg);
+  }
 }
-/* Mobile Version */ 
-@media (max-width: 600px) {
+/* Mobile & tablet Version */ 
+@media (max-width: 992px) {
   #about .bubblepink {
     left: -5em;
     width: 200px;
@@ -495,5 +670,5 @@ footer section .btn-floating:hover {
   }
   #skills .container {
     margin-top: 2rem;
-  } 
+  }
 }
