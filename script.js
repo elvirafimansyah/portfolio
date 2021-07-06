@@ -25,3 +25,23 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 $('.js-scroll-trigger').click(function() {
   $('.navbar-collapse').collapse('hide');
 });
+
+/*==================== DARK LIGHT THEME ====================*/ 
+var checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
