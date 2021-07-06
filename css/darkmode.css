@@ -1,0 +1,94 @@
+html[data-theme='dark'] {
+  --bg: #232433;
+  --bg-panel: #fff7f7;
+  --color-headings: #302dd8c2;
+  --color-text: #ffffff;
+}
+[data-theme='dark'] h1 {
+  color: white;
+}
+[data-theme='dark'] p {
+  color: white;
+}
+[data-theme='dark'] h3 {
+  color: white;
+}
+[data-theme='dark'] h2{
+  color: white;
+}
+[data-theme='dark'] .jumbotron .hero p{
+  color: rgb(180, 179, 179);
+}
+
+[data-theme='dark'] .row .col{
+  color: white;
+}
+[data-theme='dark'] label{
+  color: white;
+}
+[data-theme='dark'] h4{
+  color: white;
+}
+[data-theme='dark'] hr {
+  color: white;
+}
+[data-theme='dark'] .bi {
+  color: white;
+}
+[data-theme='dark'] .main-card {
+  background-color: #5f617c;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.toggle-container input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-container label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggle-container label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.toggle-container input:checked + label {
+  background: var(--color-headings);
+}
+
+.toggle-container input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.toggle-container label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
