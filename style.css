@@ -14,11 +14,9 @@
   --font: 'Poppins', sans-serif;
 }
 html {
-  scroll-behavior: smooth;
+  height: 100%;
 }
-body {
-  font-family: var(--font);
-}
+
 /*Kegunaan */
 .bawah::after{
   content: '';
@@ -39,6 +37,8 @@ body {
   margin-bottom: -8px; 
   margin-top: 0.5rem; 
 }
+/* Dark Mode Toggle */
+
 /* Navbar */
 .navbar-brand {
   font-family: 'Viga', sans-serif;
@@ -64,7 +64,7 @@ body {
 .jumbotron p {
   font-size: 1.5rem;
   font-weight: 600;
-  color:#6B6B6B;
+  color:#808080;
 }
 .jumbotron .bi {
   color: black;
@@ -97,6 +97,10 @@ body {
 }
 #about p {
   font-size: 1.2rem;
+  color: black;
+}
+#about .about p {
+  color: rgb(110, 110, 110);
 }
 #about .about h2 {
   font-size: 2rem;
@@ -645,6 +649,10 @@ footer section .btn-floating:hover {
   }
   .brand ul li:hover {
     transform: rotate(2deg);
+  }
+  [data-theme='dark'] .nav-link {
+    background:white;
+    border-radius: 5px;
   }
 }
 /* Mobile & tablet Version */ 
