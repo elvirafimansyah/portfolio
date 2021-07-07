@@ -42,13 +42,17 @@ html[data-theme='dark'] {
 body {
   background-color: var(--bg);
 }
-
+.fixed-bottom {
+  margin: 5px;
+}
+.toggle-container span {
+  opacity: 0;
+}
 .toggle-container input[type=checkbox]{
   height: 0;
   width: 0;
   visibility: hidden;
 }
-
 .toggle-container label {
   cursor: pointer;
   text-indent: -9999px;
@@ -75,7 +79,6 @@ body {
 .toggle-container input:checked + label {
   background: var(--color-headings);
 }
-
 .toggle-container input:checked + label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
@@ -91,4 +94,10 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+/* Desktop version */ 
+@media (min-width: 992px) {
+  .fixed-bottom {
+    margin: 20px;
+  }
 }
