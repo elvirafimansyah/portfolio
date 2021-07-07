@@ -204,10 +204,6 @@ html {
 #skills {
   margin-top: 2rem;
 }
-.createskills::after {
-  content: url(img/hiasan.png);
-  position: relative;
-}
 .bubbleend {
   position: relative;
   left: 60%;
@@ -345,7 +341,7 @@ html {
 
 /* Client Feedback */
 #client {
-  margin-top: 10%;
+  margin-top: 17%;
 }
 #client p {
   color: var(--blue);
@@ -483,7 +479,7 @@ span {
   padding: 25px;
   display: flex;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 #portfolio h2 {
   font-size: 35px;
@@ -511,9 +507,6 @@ span {
 /* Contact */
 #contact {
   margin-bottom: 7rem;
-}
-#contact::before {
-  content: url(img/hiasan.png);
 }
 .contact img {
   width: 700px;
@@ -600,9 +593,6 @@ footer section .btn-floating:hover {
     left: 90%;
     top: 10%;
   }
-  .createskills::after {
-    left: 104.5%;
-  }
   #skills .bubble {
     left: -5%;
   }
@@ -679,5 +669,15 @@ footer section .btn-floating:hover {
   }
   #skills .container {
     margin-top: 2rem;
+  }
+}
+/* Small Phone Device */
+@media (max-width: 322px) {
+  #portfolio .card-port {
+    padding: 13px;
+    margin: 2px;
+  }
+  .card-port h1 {
+    font-size: 45px;
   }
 }
