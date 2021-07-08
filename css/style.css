@@ -65,6 +65,7 @@ html {
 .jumbotron {
   font-family: var(--font);
   overflow: hidden;
+	margin-top: 5rem;
 }
 .jumbotron h1 {
   font-size: 3.5rem;
