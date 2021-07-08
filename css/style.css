@@ -680,4 +680,15 @@ footer section .btn-floating:hover {
   .card-port h1 {
     font-size: 45px;
   }
+	.card-client {
+    height: 450px;
+  }
+  .card-client .quote {
+    position: relative;
+    top: -3%;
+  }
+  .card-client .card-text {
+    position: relative;
+    top: 3%;
+  }
 }
