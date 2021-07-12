@@ -17,6 +17,27 @@
 html {
   height: 100%;
 }
+/* Custom Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#58EFEC, #E85C90); 
+  border-radius: 8px;
+  border: 1px solid #e80ecb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient( #088684, #e61c66); 
+}
 
 /*Kegunaan */
 .bawah::after{
