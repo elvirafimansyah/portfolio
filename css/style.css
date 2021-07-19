@@ -31,7 +31,6 @@ html {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#58EFEC, #E85C90); 
   border-radius: 8px;
-  border: 1px solid #e80ecb;
 }
 
 /* Handle on hover */
