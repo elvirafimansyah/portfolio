@@ -17,6 +17,7 @@
 html {
   height: 100%;
 }
+
 /* Custom Scroll Bar */
 /* width */
 ::-webkit-scrollbar {
@@ -24,8 +25,8 @@ html {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -37,7 +38,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient( #088684, #e61c66); 
 }
-
 /*Kegunaan */
 .bawah::after{
   content: '';
@@ -131,7 +131,7 @@ html {
 #about p {
   font-size: 1.2rem;
   color: black;
-}
+} 
 #about .about p {
   color: rgb(110, 110, 110);
 }
@@ -700,7 +700,17 @@ footer section .btn-floating:hover {
     margin-bottom: 2rem;
   }
   #skills .container {
-    margin-top: 2rem;
+    margin-top: 2rem;.
+  }
+  #skills .row {
+    text-align: center;
+  } 
+  #skills .row .col-lg-3 {
+    display: flex;
+    justify-content: center;
+  }
+  .bawah1::after {
+    margin: auto;
   }
 }
 /* Small Phone Device */
@@ -712,7 +722,7 @@ footer section .btn-floating:hover {
   .card-port h1 {
     font-size: 45px;
   }
-	.card-client {
+  .card-client {
     height: 450px;
   }
   .card-client .quote {
