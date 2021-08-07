@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 * {
   margin: 0;
@@ -183,7 +184,10 @@ html {
   color: var(--blue);
   font-weight: 600;
 }
-
+#projects .course {
+  pointer-events: none;
+  cursor: pointer;
+}
 #projects .main-card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 20px 20px;
@@ -700,7 +704,7 @@ footer section .btn-floating:hover {
     margin-bottom: 2rem;
   }
   #skills .container {
-    margin-top: 2rem;.
+    margin-top: 2rem;
   }
   #skills .row {
     text-align: center;
