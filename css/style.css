@@ -34,7 +34,10 @@ html {
   background: linear-gradient(#58EFEC, #E85C90); 
   border-radius: 8px;
 }
-
+::selection {
+  background: #ff90b9;
+  color: white;
+}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient( #088684, #e61c66); 
