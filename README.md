@@ -8,7 +8,7 @@
 - Skills
 - Contact
 
-### Languages and Tools
+### 🛠️ | Languages and Tools
 - HTML & CSS
 - VanillaJS
 - Bootstrap
