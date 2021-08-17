@@ -7,3 +7,9 @@
 - Projects
 - Skills
 - Contact
+
+### Languages and Tools
+- HTML & CSS
+- VanillaJS
+- Bootstrap
+- Figma
