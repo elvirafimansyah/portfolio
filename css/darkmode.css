@@ -35,10 +35,12 @@ html[data-theme='dark'] {
 [data-theme='dark'] .bi {
   color: white;
 }
+[data-theme='dark'] .fab {
+  color: white;
+}
 [data-theme='dark'] .main-card {
   background-color: #5f617c;
 }
-
 body {
   background-color: var(--bg);
 }
