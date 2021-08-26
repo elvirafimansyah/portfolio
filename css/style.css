@@ -197,10 +197,6 @@ html {
   color: var(--blue);
   font-weight: 600;
 }
-#projects .course {
-  pointer-events: none;
-  cursor: pointer;
-}
 #projects .main-card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 20px 20px;
@@ -218,16 +214,28 @@ html {
   border: 2px solid #3744AC;
   transition: 0.3s ease-in-out;
 }
+.main-card .card-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .main-card .card-text a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 20px;
   font-weight: 600;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.main-card .card-text a:hover {
-  color: var(--blue);
+.main-card .card-text .btn-aqua {
+  background: #20c997;
+}
+.main-card .card-text .btn-purple {
+  background: #A98EDA;
+}
+.main-card .card-text .btn-orange {
+  background: #FFC8C8;
 }
 .bubble {
   overflow: hidden;
