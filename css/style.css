@@ -198,15 +198,27 @@ html {
   font-weight: 600;
 }
 #projects .main-card {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 20px 20px;
   border-radius: 10px;
   transition: 0.3s ease-in;
   border: 1px solid #DFDFDF;
 }
 #projects .main-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   cursor: pointer;
+}
+.front-projects {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  color: var(--pink);
+  font-size: 23px;
+}
+.ui-project {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  color: var(--pastelblue);
+  font-size: 23px;
 }
 .main-card .card-image img{
   border-radius: 10px;
@@ -219,6 +231,9 @@ html {
   justify-content: space-evenly;
   align-items: center;
 }
+.text-projects {
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
 .main-card .card-text a {
   text-decoration: none;
   color: white;
@@ -230,12 +245,27 @@ html {
 }
 .main-card .card-text .btn-aqua {
   background: #20c997;
+  border: 1px solid #3744AC;
 }
 .main-card .card-text .btn-purple {
   background: #A98EDA;
+  border: 1px solid #3744AC;
 }
 .main-card .card-text .btn-orange {
   background: #FFC8C8;
+  border: 1px solid #3744AC;
+}
+.main-card .card-text .btn-oren {
+  background: #FF7A00;
+  border: 1px solid #3744AC;
+}
+.main-card .card-text .btn-tosqa {
+  background: #99dfdf;
+  border: 1px solid #3744AC;
+}
+.main-card .card-text .btn-tosqatua {
+  background: #25D1DC;
+  border: 1px solid #3744AC;
 }
 .bubble {
   overflow: hidden;
@@ -643,9 +673,6 @@ footer section .btn-floating:hover {
   }
   #about .exp1 {
     padding-right: 5.5rem;
-  }
-  #projects .main-card:hover {
-    transform: scale(1.03);
   }
   .bubbleend {
     left: 90%;
