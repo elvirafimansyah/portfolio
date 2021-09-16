@@ -1,465 +1,470 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!doctype html>
+  <html lang="en" data-theme="light">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- FontAwesome Icons -->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <!-- FontAwesome Icons -->
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-    <!-- Font Viga Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-    <!-- Font Poppins Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">  
+      <!-- Bootstrap Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+      <!-- Font Viga Google -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+      <!-- Font Poppins Google -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">  
 
-    <!-- logo -->
-    <link rel="icon" type="image/jpg" href="logo.png">
+      <!-- logo -->
+      <link rel="icon" type="image/jpg" href="logo.png">
+      
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/darkmode.css">
+      <style>
+        @keyframes hideLoader{0%{ width: 100%; height: 100%; }100%{ width: 0; height: 0; }  }  body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center;}body:not(.loaded) > div.loader{ opacity: 1;}body:not(.loaded){ overflow: hidden;}  body.loaded > div.loader{animation: hideLoader .5s linear .5s forwards;  } /* Typing Animation */.loading-animation {width: 6px;height: 6px;border-radius: 50%;animation: typing 1s linear infinite alternate;position: relative;left: -12px;}@keyframes typing {0% {background-color: rgba(100,100,100, 1);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 0.2);}25% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 2),24px 0px 0px 0px rgba(100,100,100, 0.2);}75% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 1);}}
+      </style>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <style>
-      @keyframes hideLoader{0%{ width: 100%; height: 100%; }100%{ width: 0; height: 0; }  }  body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center;}body:not(.loaded) > div.loader{ opacity: 1;}body:not(.loaded){ overflow: hidden;}  body.loaded > div.loader{animation: hideLoader .5s linear .5s forwards;  } /* Typing Animation */.loading-animation {width: 6px;height: 6px;border-radius: 50%;animation: typing 1s linear infinite alternate;position: relative;left: -12px;}@keyframes typing {0% {background-color: rgba(100,100,100, 1);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 0.2);}25% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 2),24px 0px 0px 0px rgba(100,100,100, 0.2);}75% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 1);}}
-    </style>
+      <script type="text/javascript">
+        window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+      </script>
 
-    <script type="text/javascript">
-      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
-    </script>
+      <script type="text/javascript"> 
+        !function(){function e(){var e=!1;e&&c("keydown",o),g.keyboardSupport&&!e&&u("keydown",o)}function t(){if(document.body){var t=document.body,r=document.documentElement,a=window.innerHeight,o=t.scrollHeight;if(x=document.compatMode.indexOf("CSS")>=0?r:t,w=t,e(),S=!0,top!=self)y=!0;else if(o>a&&(t.offsetHeight<=a||r.offsetHeight<=a)&&(r.style.height="auto",x.offsetHeight<=a)){var n=document.createElement("div");n.style.clear="both",t.appendChild(n)}g.fixedBackground||b||(t.style.backgroundAttachment="scroll",r.style.backgroundAttachment="scroll")}}function r(e,t,r,a){if(a||(a=1e3),d(t,r),1!=g.accelerationMax){var o=+new Date,n=o-T;if(n<g.accelerationDelta){var i=(1+30/n)/2;i>1&&(i=Math.min(i,g.accelerationMax),t*=i,r*=i)}T=+new Date}if(M.push({x:t,y:r,lastX:0>t?.99:-.99,lastY:0>r?.99:-.99,start:+new Date}),!C){var l=e===document.body,u=function(){for(var o=+new Date,n=0,i=0,c=0;c<M.length;c++){var s=M[c],d=o-s.start,f=d>=g.animationTime,p=f?1:d/g.animationTime;g.pulseAlgorithm&&(p=h(p));var m=s.x*p-s.lastX>>0,w=s.y*p-s.lastY>>0;n+=m,i+=w,s.lastX+=m,s.lastY+=w,f&&(M.splice(c,1),c--)}l?window.scrollBy(n,i):(n&&(e.scrollLeft+=n),i&&(e.scrollTop+=i)),t||r||(M=[]),M.length?E(u,e,a/g.frameRate+1):C=!1};E(u,e,0),C=!0}}function a(e){S||t();var a=e.target,o=l(a);if(!o||e.defaultPrevented||s(w,"embed")||s(a,"embed")&&/\.pdf/i.test(a.src))return!0;var n=e.wheelDeltaX||0,i=e.wheelDeltaY||0;return n||i||(i=e.wheelDelta||0),!g.touchpadSupport&&f(i)?!0:(Math.abs(n)>1.2&&(n*=g.stepSize/120),Math.abs(i)>1.2&&(i*=g.stepSize/120),r(o,-n,-i),void e.preventDefault())}function o(e){var t=e.target,a=e.ctrlKey||e.altKey||e.metaKey||e.shiftKey&&e.keyCode!==H.spacebar;if(/input|textarea|select|embed/i.test(t.nodeName)||t.isContentEditable||e.defaultPrevented||a)return!0;if(s(t,"button")&&e.keyCode===H.spacebar)return!0;var o,n=0,i=0,u=l(w),c=u.clientHeight;switch(u==document.body&&(c=window.innerHeight),e.keyCode){case H.up:i=-g.arrowScroll;break;case H.down:i=g.arrowScroll;break;case H.spacebar:o=e.shiftKey?1:-1,i=-o*c*.9;break;case H.pageup:i=.9*-c;break;case H.pagedown:i=.9*c;break;case H.home:i=-u.scrollTop;break;case H.end:var d=u.scrollHeight-u.scrollTop-c;i=d>0?d+10:0;break;case H.left:n=-g.arrowScroll;break;case H.right:n=g.arrowScroll;break;default:return!0}r(u,n,i),e.preventDefault()}function n(e){w=e.target}function i(e,t){for(var r=e.length;r--;)z[N(e[r])]=t;return t}function l(e){var t=[],r=x.scrollHeight;do{var a=z[N(e)];if(a)return i(t,a);if(t.push(e),r===e.scrollHeight){if(!y||x.clientHeight+10<r)return i(t,document.body)}else if(e.clientHeight+10<e.scrollHeight&&(overflow=getComputedStyle(e,"").getPropertyValue("overflow-y"),"scroll"===overflow||"auto"===overflow))return i(t,e)}while(e=e.parentNode)}function u(e,t,r){window.addEventListener(e,t,r||!1)}function c(e,t,r){window.removeEventListener(e,t,r||!1)}function s(e,t){return(e.nodeName||"").toLowerCase()===t.toLowerCase()}function d(e,t){e=e>0?1:-1,t=t>0?1:-1,(k.x!==e||k.y!==t)&&(k.x=e,k.y=t,M=[],T=0)}function f(e){if(e){e=Math.abs(e),D.push(e),D.shift(),clearTimeout(A);var t=D[0]==D[1]&&D[1]==D[2],r=p(D[0],120)&&p(D[1],120)&&p(D[2],120);return!(t||r)}}function p(e,t){return Math.floor(e/t)==e/t}function m(e){var t,r,a;return e*=g.pulseScale,1>e?t=e-(1-Math.exp(-e)):(r=Math.exp(-1),e-=1,a=1-Math.exp(-e),t=r+a*(1-r)),t*g.pulseNormalize}function h(e){return e>=1?1:0>=e?0:(1==g.pulseNormalize&&(g.pulseNormalize/=m(1)),m(e))}var w,v={frameRate:150,animationTime:1800,stepSize:85,pulseAlgorithm:!0,pulseScale:8,pulseNormalize:1,accelerationDelta:20,accelerationMax:1,keyboardSupport:!0,arrowScroll:50,touchpadSupport:!0,fixedBackground:!0,excluded:""},g=v,b=!1,y=!1,k={x:0,y:0},S=!1,x=document.documentElement,D=[120,120,120],H={left:37,up:38,right:39,down:40,spacebar:32,pageup:33,pagedown:34,end:35,home:36},g=v,M=[],C=!1,T=+new Date,z={};setInterval(function(){z={}},1e4);var A,N=function(){var e=0;return function(t){return t.uniqueID||(t.uniqueID=e++)}}(),E=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||function(e,t,r){window.setTimeout(e,r||1e3/60)}}(),K=/chrome/i.test(window.navigator.userAgent),L="onmousewheel"in document;L&&K&&(u("mousedown",n),u("mousewheel",a),u("load",t))}();
+        !function(){function e(){var e=!1;e&&c("keydown",o),g.keyboardSupport&&!e&&u("keydown",o)}function t(){if(document.body){var t=document.body,r=document.documentElement,a=window.innerHeight,o=t.scrollHeight;if(x=document.compatMode.indexOf("CSS")>=0?r:t,w=t,e(),S=!0,top!=self)y=!0;else if(o>a&&(t.offsetHeight<=a||r.offsetHeight<=a)&&(r.style.height="auto",x.offsetHeight<=a)){var n=document.createElement("div");n.style.clear="both",t.appendChild(n)}g.fixedBackground||b||(t.style.backgroundAttachment="scroll",r.style.backgroundAttachment="scroll")}}function r(e,t,r,a){if(a||(a=1e3),d(t,r),1!=g.accelerationMax){var o=+new Date,n=o-T;if(n<g.accelerationDelta){var i=(1+30/n)/2;i>1&&(i=Math.min(i,g.accelerationMax),t*=i,r*=i)}T=+new Date}if(M.push({x:t,y:r,lastX:0>t?.99:-.99,lastY:0>r?.99:-.99,start:+new Date}),!C){var l=e===document.body,u=function(){for(var o=+new Date,n=0,i=0,c=0;c<M.length;c++){var s=M[c],d=o-s.start,f=d>=g.animationTime,p=f?1:d/g.animationTime;g.pulseAlgorithm&&(p=h(p));var m=s.x*p-s.lastX>>0,w=s.y*p-s.lastY>>0;n+=m,i+=w,s.lastX+=m,s.lastY+=w,f&&(M.splice(c,1),c--)}l?window.scrollBy(n,i):(n&&(e.scrollLeft+=n),i&&(e.scrollTop+=i)),t||r||(M=[]),M.length?E(u,e,a/g.frameRate+1):C=!1};E(u,e,0),C=!0}}function a(e){S||t();var a=e.target,o=l(a);if(!o||e.defaultPrevented||s(w,"embed")||s(a,"embed")&&/\.pdf/i.test(a.src))return!0;var n=e.wheelDeltaX||0,i=e.wheelDeltaY||0;return n||i||(i=e.wheelDelta||0),!g.touchpadSupport&&f(i)?!0:(Math.abs(n)>1.2&&(n*=g.stepSize/120),Math.abs(i)>1.2&&(i*=g.stepSize/120),r(o,-n,-i),void e.preventDefault())}function o(e){var t=e.target,a=e.ctrlKey||e.altKey||e.metaKey||e.shiftKey&&e.keyCode!==H.spacebar;if(/input|textarea|select|embed/i.test(t.nodeName)||t.isContentEditable||e.defaultPrevented||a)return!0;if(s(t,"button")&&e.keyCode===H.spacebar)return!0;var o,n=0,i=0,u=l(w),c=u.clientHeight;switch(u==document.body&&(c=window.innerHeight),e.keyCode){case H.up:i=-g.arrowScroll;break;case H.down:i=g.arrowScroll;break;case H.spacebar:o=e.shiftKey?1:-1,i=-o*c*.9;break;case H.pageup:i=.9*-c;break;case H.pagedown:i=.9*c;break;case H.home:i=-u.scrollTop;break;case H.end:var d=u.scrollHeight-u.scrollTop-c;i=d>0?d+10:0;break;case H.left:n=-g.arrowScroll;break;case H.right:n=g.arrowScroll;break;default:return!0}r(u,n,i),e.preventDefault()}function n(e){w=e.target}function i(e,t){for(var r=e.length;r--;)z[N(e[r])]=t;return t}function l(e){var t=[],r=x.scrollHeight;do{var a=z[N(e)];if(a)return i(t,a);if(t.push(e),r===e.scrollHeight){if(!y||x.clientHeight+10<r)return i(t,document.body)}else if(e.clientHeight+10<e.scrollHeight&&(overflow=getComputedStyle(e,"").getPropertyValue("overflow-y"),"scroll"===overflow||"auto"===overflow))return i(t,e)}while(e=e.parentNode)}function u(e,t,r){window.addEventListener(e,t,r||!1)}function c(e,t,r){window.removeEventListener(e,t,r||!1)}function s(e,t){return(e.nodeName||"").toLowerCase()===t.toLowerCase()}function d(e,t){e=e>0?1:-1,t=t>0?1:-1,(k.x!==e||k.y!==t)&&(k.x=e,k.y=t,M=[],T=0)}function f(e){if(e){e=Math.abs(e),D.push(e),D.shift(),clearTimeout(A);var t=D[0]==D[1]&&D[1]==D[2],r=p(D[0],120)&&p(D[1],120)&&p(D[2],120);return!(t||r)}}function p(e,t){return Math.floor(e/t)==e/t}function m(e){var t,r,a;return e*=g.pulseScale,1>e?t=e-(1-Math.exp(-e)):(r=Math.exp(-1),e-=1,a=1-Math.exp(-e),t=r+a*(1-r)),t*g.pulseNormalize}function h(e){return e>=1?1:0>=e?0:(1==g.pulseNormalize&&(g.pulseNormalize/=m(1)),m(e))}var w,v={frameRate:150,animationTime:1800,stepSize:85,pulseAlgorithm:!0,pulseScale:8,pulseNormalize:1,accelerationDelta:20,accelerationMax:1,keyboardSupport:!0,arrowScroll:50,touchpadSupport:!0,fixedBackground:!0,excluded:""},g=v,b=!1,y=!1,k={x:0,y:0},S=!1,x=document.documentElement,D=[120,120,120],H={left:37,up:38,right:39,down:40,spacebar:32,pageup:33,pagedown:34,end:35,home:36},g=v,M=[],C=!1,T=+new Date,z={};setInterval(function(){z={}},1e4);var A,N=function(){var e=0;return function(t){return t.uniqueID||(t.uniqueID=e++)}}(),E=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||function(e,t,r){window.setTimeout(e,r||1e3/60)}}(),K=/chrome/i.test(window.navigator.userAgent),L="onmousewheel"in document;L&&K&&(u("mousedown",n),u("mousewheel",a),u("load",t))}();
+      </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
-    <title>Elvira Firmansyah</title>
-  </head>
-  <body class="light-theme">
-    <div class="loader">
-      <div class="loading-animation"></div>
-    </div>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="navbar">
-      <div class="container " id="navCont">
-        <a class="navbar-brand text-secondary" href="#">Elvira's</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto justify-content-ccenter">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">contact</a>
-            </li>
-            <li>
-              <div class="toggle-container fixed-bottom">
-                <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
-                <span>Dark Mode Active</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+      <title>Elvira Firmansyah</title>
+    </head>
+    <body class="light-theme">
+      <div class="loader">
+        <div class="loading-animation"></div>
       </div>
-    </nav>
-    <!-- Akhir Navbar -->
-
-    <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <img src="img/portfolio.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 col-sm-12 hero">
-            <h1>Hi, I am <span>Elvira</span></h1>
-            <p>Web Developer & <br>Designer</p>
-            <div class="sosialmedia">
-              <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=freddyfirmansyah25@gmail.com" target="_blank"><i class="bi bi-envelope-fill fa-2x"></i></a>
-              <a href="https://www.instagram.com/elvinaelvira.s/" target="blank"><i class="bi bi-instagram fa-2x"></i></a>
-              <a href="https://twitter.com/elvirafirmansy1" target="blank"><i class="bi bi-twitter fa-2x"></i></a>
-              <a href="https://github.com/elvirafimansyah" target="blank"><i class="bi bi-github fa-2x"></i></a>
-              <a href="https://dribbble.com/ElviraFir" target="blank"><i class="fab fa-dribbble fa-2x"></i></a>
-            </div>
-            <a href="cv.pdf" class="btn btn-primary">Download CV &nbsp; <span class="iconify" data-inline="false" data-icon="akar-icons:send"></span></a>
-          </div>
-          <div class="col-lg-6 ">
-            <div class="lingkaran"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Akhir Jumbotron -->
-
-    <!-- About Me -->
-    <section id="about">
-      <img src="img/bubblepink.svg" class="bubblepink img-fluid" alt="" width="300">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center mb-5">
-            <h3>About <span>Me</span></h3>
-            <p class="bawah text-secondary">My Introduction+</p>
-          </div>
-        </div>
-        <div class="row about">
-          <div class="col-lg-6 col-sm-12 mt-2">
-            <h2>Wanna Know Me?</h2>
-            <hr>
-            <p>Hi 👋, I am Elvira Firmansyah. I'm a Beginner Web 
-              Developer. I'm 13 years old. I'm Junior High School 
-              Student. I live in Indonesia. I’m interested in Web
-              Development. Knowledge HTML AND CSS. 
-              My JavaScript is Low.</p>
-            <div class="keterangan">
-              <div class="icon">
-                <span class="iconify book" width="26" data-inline="false"data-icon="fa-solid:address-book"></span>
-              </div>
-              <div class="exp exp1 text-center">
-                <h4>2+</h4>
-                <p>Months<br>Experience</p>
-              </div>
-              <div class="icon">
-                <span class="iconify smile" width="26" data-inline="false" data-icon="fa-regular:smile-beam"></span>
-              </div>
-              <div class="exp text-center">
-                <h4>3+</h4>
-                <p>Completed <br>Projects</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-12 mt-3">
-            <img src="img/bubble.png" class="img-fluid bubble" alt="" width="400">
-            <img src="img/girl.png"  class="img-fluid girl" alt="" width="350">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir About-->
-
-    <!-- My Projects -->
-    <div class="bubble">
-      <img src="img/t.svg" class="circle2 img-fluid" alt="">
-      <div class="circle img-fluid"></>
-    </div>
-    <section id="projects">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center mb-5">
-            <h2>My <span>Awesome</span> Projects</h2>
-            <p class="bawah">List of personal project</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col mb-2">
-            <h4 class="front-projects text-projects">Front-End Projects</h4>
-          </div>
-        </div>
-        <div class="row card-projects">
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/uibmi.png" class="img-fluid" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://elvirafimansyah.github.io/BMI-Calculator/" class="btn btn-aqua" target="_blank"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
-                <a href="https://github.com/elvirafimansyah/BMI-Calculator" class="btn btn-aqua" target="_blank"><i class="bi bi-github"></i>&ensp;View Github</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/pt.png" class="img-fluid" width="1200" height="900" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://elvirafimansyah.github.io/portfolio/" class="btn btn-purple" target="_blank"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
-                <a href="https://github.com/elvirafimansyah/portfolio" class="btn btn-purple" target="_blank"><i class="bi bi-github"></i>&ensp;View Github</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/linkvr.png" class="img-fluid" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://linkvr.netlify.app/" target="_blank" class="btn btn-tosqatua course"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col mb-2 mt-5">
-            <h4 class="ui-project text-projects">Design Projects</h4>
-          </div>
-        </div>
-        <div class="row card-projects">
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/loginui.png" class="img-fluid" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://dribbble.com/shots/16323513-Form-Login-User-UI-DESIGN-By-Elvira-Firmansyah" target="_blank" class="btn btn-oren course"><i class="fab fa-dribbble"></i>&ensp;View Dribbble</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/uisosmed.png" class="img-fluid" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://dribbble.com/shots/16359856-Social-Media-Website-UI-Design" target="_blank" class="btn btn-tosqa course"><i class="fab fa-dribbble"></i>&ensp;View Dribbble</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
-            <div class="main-card">
-              <div class="card-image">
-                <img src="img/uibrowser.png" class="img-fluid" alt="">
-              </div>
-              <div class="card-text">
-                <a href="https://dribbble.com/shots/16228234-My-Browser-Design-Draniz-Browser-Ui-Design-Elvira" target="_blank" class="btn btn-orange course"><i class="fab fa-dribbble"></i></i>&ensp;View Dribbble</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir My Projects-->
-
-    <!-- Skills -->
-    <section id="skills">
-      <img src="img/bubble.png" class="img-fluid  bubbleend" alt="" width="300">
-      <div class="bubble"></div>
-      <div class="container">
-        <div class="row">
-          <p>Services </p>
-          <h2 class="bawah1">Create Solutions</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-sm-12">
-            <div class="main-skills skill1">
-              <div class="card-skills text-center">
-                <img src="img/html.png" alt="">
-                <h6>HTML</h6>
-                <span>82%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-12">
-            <div class="main-skills skill2">
-              <div class="card-skills text-center">
-                <img src="img/css.png" alt="" width="50">
-                <h6>CSS</h6>
-                <span>65%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-12">
-            <div class="main-skills skill3">
-              <div class="card-skills text-center">
-                <img src="img/figma.png" alt="" width="87">
-                <h6>Figma</h6>
-                <span>64%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-12">
-            <div class="main-skills skill4">
-              <div class="card-skills text-center">
-                <img src="img/ps.png" alt="">
-                <h6>Photoshop</h6>
-                <span>30%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="img/hiasan.png" class="createskills img-fluid float-end" alt="hiasan">
-    </section>
-    <!-- Akhir Skills -->
-
-    <!-- Client Feedback -->
-    <section id="client">
-      <div class="container">
-        <div class="row">
-          <div class="col mb-3 text-center">
-            <p>Client Feedback</p>
-            <h2 class="bawah">Our Client say About Us.</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col justify-content-center d-flex">
-            <div class="main-client">
-              <div class="card-client">
-                <div class="people">
-                  <img src="img/client.jpg" alt="" class="img-fluid" width="100">
-                  <h4>John Doe</h4>
-                  <span>UI/UX Designer</span>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="navbar">
+        <div class="container " id="navCont">
+          <a class="navbar-brand text-secondary" href="#">Elvira's</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto justify-content-ccenter">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#projects">projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#skills">skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">contact</a>
+              </li>
+              <li>
+                <div class="toggle-container fixed-bottom">
+                  <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+                  <span>Dark Mode Active</span>
                 </div>
-                <div class="quote">
-                  <img src="img/opentag.png" alt="" class="img-fluid" width=70>
-                </div>
-                <div class="card-text">
-                  <h5>"It's your round don't get shirty with me me old mucker buggered hotpot bodge that lost the plot cor blimey guvnor." </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col brand justify-content-center d-flex mt-5">
-            <ul>
-              <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_01.png" alt=""></li>
-              <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_03.png" alt=""></li>
-              <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_05.png" alt=""></li>
-              <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_02_dark.png" alt=""></li>
-              <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_06.png" alt=""></li>
+              </li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Akhir Client Feedback-->
+      </nav>
+      <!-- Akhir Navbar -->
 
-    <section id="portfolio">
-      <div class="bubble"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class="bawah2">Portfolio</h2>
-          </div>
-        </div>
-        <div class="row card-port">
-          <div class="col-lg-6 col-sm-12 card-text">
-            <h1>let's work <br> together!</h1>
-            <p>I’m Looking for <br>something</p>
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <img src="img/port.png" class="img-fluid" alt="">
-          </div>
-        </div>
-      </div>
-      <img src="img/hiasan.png" class="createskill1 img-fluid mt-5" alt="hiasan">
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col mb-5 text-center" >
-            <h2 class="bawah"><span>Contact</span> Me</h2>
-          </div>
-        </div>
-        <div class="row contact">
-          <div class="col-lg-6 col-sm-12">
-            <img src="img/contact.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 col-sm-12">
-              <div class="alert alert-info alert-dismissible fade show my-alert d-none" role="alert">
-                  <strong>Thank You!</strong> We have received your message.
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <img src="img/portfolio.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-sm-12 hero">
+              <h1>Hi, I am <span>Elvira</span></h1>
+              <p>Web Developer & <br>Designer</p>
+              <div class="sosialmedia">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=freddyfirmansyah25@gmail.com" target="_blank"><i class="bi bi-envelope-fill fa-2x"></i></a>
+                <a href="https://www.instagram.com/elvinaelvira.s/" target="blank"><i class="bi bi-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/elvirafirmansy1" target="blank"><i class="bi bi-twitter fa-2x"></i></a>
+                <a href="https://github.com/elvirafimansyah" target="blank"><i class="bi bi-github fa-2x"></i></a>
+                <a href="https://dribbble.com/ElviraFir" target="blank"><i class="fab fa-dribbble fa-2x"></i></a>
               </div>
-              <form name='contact-my-website'>
-                  <div class="mb-3">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
-                  </div>
-                  <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-kirim send float-end">Send</button>
-
-                  <button class="btn-load btn-loading float-end d-none" type="button" disabled>
-                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      Loading...
-                  </button>
-              </form>
+              <a href="cv.pdf" class="btn btn-primary">Download CV &nbsp; <span class="iconify" data-inline="false" data-icon="akar-icons:send"></span></a>
+            </div>
+            <div class="col-lg-6 ">
+              <div class="lingkaran"></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      <!-- Akhir Jumbotron -->
 
-    <footer class="text-center text-white copyright" style="background-color: var(--pink);  border-top: 2px solid rgb(243, 71, 192)">
-      <div class="container pt-4">
-          <!-- Social Media -->
-          <section class="mb-4">
-            <h2 class="footername">Made By Elvira Firmansyah</h2>
-            <!-- Twitter -->
-            <a
-              class="btn btn-link btn-floating btn-lg text-light m-1"
-              href="https://twitter.com/elvirafirmansy1"
-              role="button"
-              data-mdb-ripple-color="dark"
-              target="blank"><i class="fab fa-twitter"></i
-            ></a>
+      <!-- About Me -->
+      <section id="about">
+        <img src="img/bubblepink.svg" class="bubblepink img-fluid" alt="" width="300">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mb-5">
+              <h3>About <span>Me</span></h3>
+              <p class="bawah text-secondary">My Introduction+</p>
+            </div>
+          </div>
+          <div class="row about">
+            <div class="col-lg-6 col-sm-12 mt-2">
+              <h2>Wanna Know Me?</h2>
+              <hr>
+              <p>Hi 👋, I am Elvira Firmansyah. I'm a Beginner Web 
+                Developer. I'm 13 years old. I'm Junior High School 
+                Student. I live in Indonesia. I’m interested in Web
+                Development. Knowledge HTML AND CSS. 
+                My JavaScript is Low.</p>
+              <div class="keterangan">
+                <div class="icon">
+                  <span class="iconify book" width="26" data-inline="false"data-icon="fa-solid:address-book"></span>
+                </div>
+                <div class="exp exp1 text-center">
+                  <h4>2+</h4>
+                  <p>Months<br>Experience</p>
+                </div>
+                <div class="icon">
+                  <span class="iconify smile" width="26" data-inline="false" data-icon="fa-regular:smile-beam"></span>
+                </div>
+                <div class="exp text-center">
+                  <h4>3+</h4>
+                  <p>Completed <br>Projects</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 mt-3">
+              <img src="img/bubble.png" class="img-fluid bubble" alt="" width="400">
+              <img src="img/girl.png"  class="img-fluid girl" alt="" width="350">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir About-->
 
-            <!-- Instagram -->
-            <a
-              class="btn btn-link btn-floating btn-lg text-light m-1"
-              href="https://www.instagram.com/elvinaelvira.s/"
-              role="button"
-              data-mdb-ripple-color="dark"
-              target="blank"><i class="fab fa-instagram"></i
-            ></a>
-
-            <!-- Github -->
-            <a
-              class="btn btn-link btn-floating btn-lg text-light m-1"
-              href="https://github.com/elvirafimansyah"
-              role="button"
-              data-mdb-ripple-color="dark"
-              target="blank"><i class="fab fa-github"></i
-            ></a>
-
-            <!-- Dribble -->
-            <a
-              class="btn btn-link btn-floating btn-lg text-light m-1"
-              href="https://dribbble.com/ElviraFir"
-              role="button"
-              data-mdb-ripple-color="dark"
-              target="blank"><i class="fab fa-dribbble"></i></a>
-          </section>
-          <!-- Section: Social media -->
+      <!-- My Projects -->
+      <div class="bubble">
+        <img src="img/t.svg" class="circle2 img-fluid" alt="">
+        <div class="circle img-fluid"></>
       </div>
-      <!-- Copyright -->
-      <div class="text-center text-white p-3 fw-bold " style="background-color: #728df6; border-top: 2px solid var(--blue)">
-          © 2021 Copyright | All Rights Reserved
-      </div>
-    <script src="script.js"></script>
+      <section id="projects">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mb-5">
+              <h2>My <span>Awesome</span> Projects</h2>
+              <p class="bawah">List of personal project</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-2">
+              <h4 class="front-projects text-projects">Front-End Projects</h4>
+            </div>
+          </div>
+          <div class="row card-projects">
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/uibmi.png" class="img-fluid" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://elvirafimansyah.github.io/BMI-Calculator/" class="btn btn-aqua" target="_blank"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
+                  <a href="https://github.com/elvirafimansyah/BMI-Calculator" class="btn btn-aqua" target="_blank"><i class="bi bi-github"></i>&ensp;View Github</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/pt.png" class="img-fluid" width="1200" height="900" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://elvirafimansyah.github.io/portfolio/" class="btn btn-purple" target="_blank"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
+                  <a href="https://github.com/elvirafimansyah/portfolio" class="btn btn-purple" target="_blank"><i class="bi bi-github"></i>&ensp;View Github</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/linkvr.png" class="img-fluid" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://linkvr.netlify.app/" target="_blank" class="btn btn-tosqatua course"><i class="bi bi-link-45deg"></i>&ensp;Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-2 mt-5">
+              <h4 class="ui-project text-projects">Design Projects</h4>
+            </div>
+          </div>
+          <div class="row card-projects">
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/loginui.png" class="img-fluid" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://dribbble.com/shots/16323513-Form-Login-User-UI-DESIGN-By-Elvira-Firmansyah" target="_blank" class="btn btn-oren course"><i class="fab fa-dribbble"></i>&ensp;View Dribbble</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/uisosmed.png" class="img-fluid" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://dribbble.com/shots/16359856-Social-Media-Website-UI-Design" target="_blank" class="btn btn-tosqa course"><i class="fab fa-dribbble"></i>&ensp;View Dribbble</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center d-flex">
+              <div class="main-card">
+                <div class="card-image">
+                  <img src="img/uibrowser.png" class="img-fluid" alt="">
+                </div>
+                <div class="card-text">
+                  <a href="https://dribbble.com/shots/16228234-My-Browser-Design-Draniz-Browser-Ui-Design-Elvira" target="_blank" class="btn btn-orange course"><i class="fab fa-dribbble"></i></i>&ensp;View Dribbble</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir My Projects-->
 
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript">    
-      $('.js-scroll-trigger').click(function() {
-          $('.navbar-collapse').collapse('hide');
-      });
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>  
-  </body>
-</html>
+      <!-- Skills -->
+      <section id="skills">
+        <img src="img/bubble.png" class="img-fluid  bubbleend" alt="" width="300">
+        <div class="bubble"></div>
+        <div class="container">
+          <div class="row">
+            <p>Services </p>
+            <h2 class="bawah1">Create Solutions</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-12">
+              <div class="main-skills skill1">
+                <div class="card-skills text-center">
+                  <img src="img/html.png" alt="">
+                  <h6>HTML</h6>
+                  <span>82%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <div class="main-skills skill2">
+                <div class="card-skills text-center">
+                  <img src="img/css.png" alt="" width="50">
+                  <h6>CSS</h6>
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <div class="main-skills skill3">
+                <div class="card-skills text-center">
+                  <img src="img/figma.png" alt="" width="87">
+                  <h6>Figma</h6>
+                  <span>64%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <div class="main-skills skill4">
+                <div class="card-skills text-center">
+                  <img src="img/ps.png" alt="">
+                  <h6>Photoshop</h6>
+                  <span>30%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="img/hiasan.png" class="createskills img-fluid float-end" alt="hiasan">
+      </section>
+      <!-- Akhir Skills -->
+
+      <!-- Client Feedback -->
+      <section id="client">
+        <div class="container">
+          <div class="row">
+            <div class="col mb-3 text-center">
+              <p>Client Feedback</p>
+              <h2 class="bawah">Our Client say About Us.</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col justify-content-center d-flex">
+              <div class="main-client">
+                <div class="card-client">
+                  <div class="people">
+                    <img src="img/client.jpg" alt="" class="img-fluid" width="100">
+                    <h4>John Doe</h4>
+                    <span>UI/UX Designer</span>
+                  </div>
+                  <div class="quote">
+                    <img src="img/opentag.png" alt="" class="img-fluid" width=70>
+                  </div>
+                  <div class="card-text">
+                    <h5>"It's your round don't get shirty with me me old mucker buggered hotpot bodge that lost the plot cor blimey guvnor." </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col brand justify-content-center d-flex mt-5">
+              <ul>
+                <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_01.png" alt=""></li>
+                <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_03.png" alt=""></li>
+                <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_05.png" alt=""></li>
+                <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_02_dark.png" alt=""></li>
+                <li><img src="https://api.wpmet.com/auth/wp-content/uploads/2020/12/logo_06.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir Client Feedback-->
+
+      <section id="portfolio">
+        <div class="bubble"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="bawah2">Portfolio</h2>
+            </div>
+          </div>
+          <div class="row card-port">
+            <div class="col-lg-6 col-sm-12 card-text">
+              <h1>let's work <br> together!</h1>
+              <p>I’m Looking for <br>something</p>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <img src="img/port.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+        <img src="img/hiasan.png" class="createskill1 img-fluid mt-5" alt="hiasan">
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col mb-5 text-center" >
+              <h2 class="bawah"><span>Contact</span> Me</h2>
+            </div>
+          </div>
+          <div class="row contact">
+            <div class="col-lg-6 col-sm-12">
+              <img src="img/contact.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="alert alert-info alert-dismissible fade show my-alert d-none" role="alert">
+                    <strong>Thank You!</strong> We have received your message.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <form name='contact-my-website'>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                      <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-kirim send float-end">Send</button>
+
+                    <button class="btn-load btn-loading float-end d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center text-white copyright" style="background-color: var(--pink);  border-top: 2px solid rgb(243, 71, 192)">
+        <div class="container pt-4">
+            <!-- Social Media -->
+            <section class="mb-4">
+              <h2 class="footername">Made By Elvira Firmansyah</h2>
+              <!-- Twitter -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-light m-1"
+                href="https://twitter.com/elvirafirmansy1"
+                role="button"
+                data-mdb-ripple-color="dark"
+                target="blank"><i class="fab fa-twitter"></i
+              ></a>
+
+              <!-- Instagram -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-light m-1"
+                href="https://www.instagram.com/elvinaelvira.s/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                target="blank"><i class="fab fa-instagram"></i
+              ></a>
+
+              <!-- Github -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-light m-1"
+                href="https://github.com/elvirafimansyah"
+                role="button"
+                data-mdb-ripple-color="dark"
+                target="blank"><i class="fab fa-github"></i
+              ></a>
+
+              <!-- Dribble -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-light m-1"
+                href="https://dribbble.com/ElviraFir"
+                role="button"
+                data-mdb-ripple-color="dark"
+                target="blank"><i class="fab fa-dribbble"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Copyright -->
+        <div class="text-center text-white p-3 fw-bold " style="background-color: #728df6; border-top: 2px solid var(--blue)">
+            © 2021 Copyright | All Rights Reserved
+        </div>
+      <script src="script.js"></script>
+
+      <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script type="text/javascript">    
+        $('.js-scroll-trigger').click(function() {
+            $('.navbar-collapse').collapse('hide');
+        });
+      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>  
+    </body>
+  </html>
