@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/elvirafimansyah/portfolio/master/img/pt.png" alt="">
 
 ### 🌐 | Section Web
-- Home
+- `Home`
 - About 
 - Projects
 - Skills
