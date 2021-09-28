@@ -3,7 +3,7 @@
 
 ### 🌐 | Section Web
 - `Home`
-- About 
+- ```About``` 
 - Projects
 - Skills
 - Contact
