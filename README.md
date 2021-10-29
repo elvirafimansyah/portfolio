@@ -3,10 +3,10 @@
 
 ### 🌐 | Section Web
 - `Home`
-- ```About``` 
-- Projects
-- Skills
-- Contact
+- `About` 
+- `Projects`
+- `Skills`
+- `Contact`
 
 ### 🛠️ | Languages and Tools
 - HTML & CSS
