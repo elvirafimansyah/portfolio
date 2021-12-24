@@ -1,8 +1,9 @@
 # Portfolio's Elvira
 <img src="https://raw.githubusercontent.com/elvirafimansyah/portfolio/master/img/pt.png" alt="">
 
- Link 🔗 : http://elvira.elvinaf.xyz/ <br>
-           https://elvirafimansyah.github.io/portfolio/
+Link 🔗 : http://elvira.elvinaf.xyz/ 
+
+Link 🔗 : https://elvirafimansyah.github.io/portfolio/
 
 ### 🌐 | Section Web
 - `Home`
