@@ -3,6 +3,8 @@
 
 Demo 🔗 : http://elvira.elvinaf.xyz/ 
 
+![Visitor Badge](https://visitor-badges.glitch.me?username=elvirafimansyah&repo=portfolio&label=VISITOR&style=for-the-badge&color=%23363AA8&token=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&contentType=svg)
+
 ### 🌐 | Section Web
 - `Home`
 - `About` 
