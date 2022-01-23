@@ -120,3 +120,61 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+
+
+// ========================= Click Effect Sounds =========================
+const all_button = document.querySelectorAll('.btn');
+
+let i = 0;
+
+for(i; i < all_button.length; i++) {
+  all_button[i].addEventListener('click', () => {
+    const sound = new Audio('sounds/click.wav');
+    sound.play();
+  });  
+};
+
+// ========================= Keyboard Mechanical Sounds ========================= //
+window.addEventListener('keydown', keyboardSounds, false);
+
+function sounds_type() {
+  const sounds = new Audio('sounds/keyboard.mp3');
+  sounds.play();
+}
+
+
+function keyboardSounds(key) {
+  if(key.keyCode == "33" || key.keyCode == "38" || key.keyCode == "34" || key.keyCode == "40") {
+    sounds_type();
+  }; 
+}
+
+
+
+
+// ========================= Smooth Scroll Jquery ========================= //  
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
