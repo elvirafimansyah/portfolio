@@ -1,7 +1,7 @@
 # Portfolio's Elvira
 <img src="https://raw.githubusercontent.com/elvirafimansyah/portfolio/master/img/pt.png" alt="">
 
-Demo 🔗 : http://elvira.elvinaf.xyz/ 
+Demo 🔗 : https://elvirafimansyah.github.io/portfolio/
 
 ![Visitor Badge](https://visitor-badges.glitch.me?username=elvirafimansyah&repo=portfolio&label=VISITOR&style=for-the-badge&color=%23363AA8&token=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&contentType=svg)
 
